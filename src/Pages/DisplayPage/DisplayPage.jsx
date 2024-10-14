@@ -15,12 +15,12 @@ class DisplayPage extends Component {
   componentDidMount() {
     const { id, posts } = this.props; 
     this.fetchPost(id, posts); 
+    
   }
 
   componentDidUpdate(prevProps) {
     const { id, posts } = this.props;
     
-  
     if (id !== prevProps.id) {
       this.setState({ loading: true, error: null }); 
       this.fetchPost(id, posts); 

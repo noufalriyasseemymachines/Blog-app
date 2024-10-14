@@ -1,10 +1,8 @@
 import React from 'react'
 import './BlogPost.css'
 import { Link } from 'react-router-dom'
-import EditButton from '../EditButton/EditButton'
-import DeleteButton from '../DeleteButton/DeleteButton'
 
-const BlogPost = ({id,title,author,content,date}) => {
+const BlogPost = ({id,title,author,content,date,deleteBlog,editBlog}) =>{
 
   return (
     <div className="showBlog">
@@ -13,11 +11,10 @@ const BlogPost = ({id,title,author,content,date}) => {
                  <p>{date}</p>
                 <div className="show-button">
                   <Link to={{pathname:`/display/${id}`}} state={{id,title,author,content,date}}>
-                    <button>Read More</button>
+                    <button>Read Blog</button>
                   </Link>
-                  <EditButton id={id} title={title} author={author} content={content} date={date}></EditButton>
-                  <DeleteButton></DeleteButton>
-
+                  <button onClick={deleteBlog}>Delete</button>
+                  <button onClick={editBlog}>Edit</button>
                 </div>
       </div>
   )

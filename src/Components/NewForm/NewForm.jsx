@@ -1,19 +1,30 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './NewForm.css'
 
-const NewForm = ({addPost,setFormDisplay}) => {
+const NewForm = ({addPost,setFormDisplay,editPost}) => {
     const [title,setTitle]=useState("")
     const [author,setAuthor]=useState("")
     const [content,setContent]=useState("")
 
+
+
+    useEffect(()=>{
+        if(editPost){
+            setTitle(editPost.title)
+            setAuthor(editPost.author)
+            setContent(editPost.content)
+        }
+        else{
+            setAuthor("")
+            setTitle("")
+            setContent("")
+            
+        }
+    },[editPost])
     const handleChange=(event)=>{
         event.preventDefault()
 
-        addPost({title,author,content,date:new Date().toISOString().slice(0,10)})
-        setTitle("")
-        setAuthor("")
-        setContent("")
-        setFormDisplay(false)
+            addPost({title,author,content,date:new Date().toISOString().slice(0,10)})
     }
   return (
     <div className='modal'>
