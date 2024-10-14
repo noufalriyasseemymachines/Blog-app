@@ -1,0 +1,31 @@
+.postList{
+    height:80%;
+    position: relative;
+}
+.postList-head{
+    margin: 10px;
+    text-align: center;
+}
+.add-button{
+    position: absolute;
+    right:5%;
+    top:0;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 10px;
+    background-color: rgb(124, 161, 124);
+    border: none;
+    font-weight: bold;
+}
+.form-display {
+    position: fixed;
+    top: 25%;
+    left: 40%;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 90%;
+    margin: 0 auto;
+    gap: 20px;
+}

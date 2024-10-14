@@ -1,0 +1,11 @@
+.back-button{
+    display: flex;
+}
+button{
+    padding: 3px 10px;
+    background-color: rgb(158, 156, 155);
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+}
