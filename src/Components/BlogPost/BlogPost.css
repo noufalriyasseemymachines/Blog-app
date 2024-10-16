@@ -1,12 +1,11 @@
 .showBlog {
     border: 1px solid #ddd;         
     border-radius: 8px;              
-    padding: 20px;                              
-    background-color: #fff;         
+    padding: 20px;                                  
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
     transition: transform 0.2s;
-    background-color: #333;    
+    background-color: #292d2d;    
     color: aliceblue;
     overflow-y: auto;
     width:100%;
@@ -14,9 +13,7 @@
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    gap:8px;
-  
-   
+    gap:8px; 
 }
 
 .showBlog h2 {
@@ -33,9 +30,23 @@
     display: flex;
     gap: 15px;
 }        
-.show-button button{
-    background-color: #8a7474;
+
+.delete,.read,.edit{
     border: none;
-    padding: 5px;
+    padding:  5px 10px;
     border-radius: 10px;
-}  
+    background-color: rgb(179, 173, 173);
+}
+/* .delete{
+    background-color: rgb(179, 173, 173);
+}
+.edit{
+    background-color: rgb(215, 215, 215);
+}
+.read{
+    background-color: white;
+} */
+.delete:hover , .edit:hover , .read:hover{
+    background-color: blanchedalmond;
+    transition: 0.2s ease;
+}

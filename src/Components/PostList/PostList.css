@@ -6,16 +6,21 @@
     margin: 10px;
     text-align: center;
 }
-.add-button{
+.add-button,.close-button{
     position: absolute;
     right:5%;
     top:0;
-    color: white;
-    padding: 5px 8px;
+    padding: 5px 20px;
     border-radius: 10px;
-    background-color: rgb(124, 161, 124);
     border: none;
     font-weight: bold;
+}
+.add-button{
+    background-color: rgb(8, 245, 8);
+    color:black;
+}
+.close-button{
+    background-color: rgb(240, 32, 9);
 }
 .form-display {
     position: fixed;
@@ -28,4 +33,10 @@
     width: 90%;
     margin: 0 auto;
     gap: 20px;
+}
+.deleteModal{
+    z-index: 1000;
+    position: fixed;
+    top: 40%;
+    left: 40%;
 }
