@@ -1,0 +1,15 @@
+.header{
+    text-align: center;
+    padding: 20px;
+    width: 80%;
+    height: 10vh;
+    margin: auto;
+}
+h2{
+    font-size: 2vw;
+    color: rgb(79, 86, 83);
+    margin: 0;
+}
+h2:hover{
+    color:coral;
+}
